@@ -1,31 +1,79 @@
 body {
-  background-image: url("/images/bg_2.jpg");
-  background-size: auto;
+  /*background-image: url("/images/canyon_bg.jpg");
+  /*NEED BACKGROUND*/
+  background-color: #F7FFF5;
+  background-size: cover;
+}
+
+header {
+  align-items: center;
+  border-bottom: black solid 3px;
+}
+
+.image {
+  background-image: url("/images/lone_cairn2.jpg");
+  background-color: white;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 h1 {
+  padding: 50px;
+  padding-top: 35px;
   font-family: 'Indie Flower', cursive;
   color: white;
-  font-size: 2.5em;
+  font-size: 2.8em;
 }
 
 h2 {
-  color: white;
+  color: black;
+  font-family: inherit;
+  font-size: 45px;
+  padding: 10px;
+  text-align: center;
 }
 
-.title {
-  width: auto;
-  border-bottom: solid white;
-  padding: 30px;
+h3 {
+  color: black;
+  font-family: inherit;
+  padding: 10px;
+}
+
+h4 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.home_body h4 {
+  color: black;
+  font-family: inherit;
+  font-size: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px black;
+  display: inline;
+}
+
+.home_body {
+  margin: 100px;
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .nav-link {
   font-size: large !important;
-}
-
-.bg_transparent {
-  background-color: transparent !important;
-  border-left: solid white 5px;
+  border-right: solid black;
+  margin: 0px;
 }
 
 .center {
@@ -34,106 +82,77 @@ h2 {
   align-items: center;
 }
 
-.imageText a {
-  color: white;
+/******** Beta Buttons *********/
+.canyons {
+  margin: 100px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.imageText {
+.column {
+  flex: 40%;
+  padding: 0 4px;
+}
+
+.canyon_icon {
+  overflow: hidden;
   text-align: center;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.canyon_icon img {
+  transform: rotate(90deg);
+  height: 400px;
+  width: 500px;
+  vertical-align: middle;
+}
+
+.canyon_text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*background-color: black;*/
-  border: white solid;
-  padding: 20px;
-  font-family: 'Indie Flower', cursive;
-}
-
-.imageText :after {
-  content: '';
-  background: grey;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.15;
-}
-
-.imageText :hover:after {
-  opacity: .4;
-}
-
-/******** portfolio *********/
-.portfolio {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto auto auto auto;
-  grid-gap: 20px;
-  margin: 200px;
-  margin-top: 50px;
-}
-
-.image img {
-  width: 100%;
-  height: 100%;
-}
-
-/*********** Reviews ************/
-.page {
-  display: grid;
-  grid-column: .25fr;
-  grid-row: auto auto auto;
-  grid-row-gap: 50px;
-  margin-left: 280px;
-  margin-right: 280px;
-  margin-bottom: 150px;
-  margin-top: 50px;
-}
-
-.review {
-  border: solid white 1.5px;
   color: white;
-  position: relative;
-  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  border: solid white;
+  padding: 4px;
 }
 
-.review :after {
-  content: '';
-  background: grey;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: .1;
+/*********** Beta ************/
+.beta_body {
+  display: flex;
+  margin: 60px;
+  margin-top: 40px;
 }
 
-p {
-  font-size: 1.25em;
-  padding: 15px;
-  text-align: center;
-}
-
-h3 {
-  padding: 20px;
-  font-size: 1.75em;
-  display: inline;
-  border-bottom: solid white;
-  padding-bottom: 5px;
-  margin: 10px;
-}
-
-h4 {
-  font-size: .75em;
-  padding-top: 0;
+.side_image {
+  flex: 1;
   float: right;
-  padding-right: 50px;
 }
 
+.main_text {
+  flex: 3;
+  text-align: left;
+}
+
+.beta_body img {
+  display: inline;
+  margin: 50px;
+  transform: rotate(90deg);
+  height: 500px;
+  width: 650px;
+}
+
+#no_rotate {
+  transform: rotate(0deg);
+}
+
+/*********** Footer ************/
 .footer {
   position: absolute;
   right: 0;
